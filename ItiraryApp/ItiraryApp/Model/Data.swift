@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+class Data {
+    static var tripsModels = [TripModel]()
+}
