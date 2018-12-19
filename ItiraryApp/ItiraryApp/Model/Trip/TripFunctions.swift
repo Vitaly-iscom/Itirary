@@ -24,7 +24,6 @@ class TripFunctions {
                 complection()
             }
         }
-        
     }
     
     static func updateTrip(tripModel: TripModel) {

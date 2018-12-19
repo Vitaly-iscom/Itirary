@@ -8,14 +8,15 @@
 
 import UIKit
 
-class UIButtonExtension: UIButton {
+extension UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    func createFloatingActionButton() {
+        backgroundColor = Theme.tint
+        layer.cornerRadius = frame.height / 2
+        tintColor = Theme.accent
+        layer.shadowOpacity = 0.25
+        layer.shadowRadius = 5
+        layer.shadowOffset = CGSize(width: 0, height: 10)
     }
-    */
 
 }
