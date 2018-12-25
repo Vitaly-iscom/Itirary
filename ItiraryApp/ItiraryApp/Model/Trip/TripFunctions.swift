@@ -6,11 +6,11 @@
 //  Copyright © 2018 IScom. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 class TripFunctions {
     static func createTrip(tripModel: TripModel) {
-        
+        Data.tripsModels.append(tripModel)
     }
     
     static func readTrips(complection: @escaping () -> ()) {
@@ -26,11 +26,13 @@ class TripFunctions {
         }
     }
     
-    static func updateTrip(tripModel: TripModel) {
+    static func updateTrip(at index: Int, title: String, image: UIImage? = nil) {
         
+        Data.tripsModels[index].title = title
+        Data.tripsModels[index].image = image
     }
     
-    static func deleteTrip(tripModel: TripModel) {
-        
+    static func deleteTrip(index: Int) {
+        Data.tripsModels.remove(at: index)
     }
 }

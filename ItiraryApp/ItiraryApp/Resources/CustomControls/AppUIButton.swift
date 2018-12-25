@@ -10,12 +10,12 @@ import UIKit
 
 class AppUIButton: UIButton {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+        backgroundColor = Theme.tint
+        layer.cornerRadius = frame.height / 2
+        setTitleColor(UIColor.white, for: .normal)
     }
-    */
 
 }
