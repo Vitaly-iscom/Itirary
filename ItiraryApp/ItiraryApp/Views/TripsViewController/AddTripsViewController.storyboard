@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5s-xG-zJN">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="FugazOne-Regular.ttf">
+            <string>FugazOne-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Trips View Controller-->
+        <scene sceneID="Euu-F0-nav">
+            <objects>
+                <viewController id="a5s-xG-zJN" customClass="TripsViewController" customModule="ItiraryApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tCs-tb-eiK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Wq-uO3">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="Xyw-lq-QPY" customClass="TripsTableViewCell" customModule="ItiraryApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="160"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xyw-lq-QPY" id="fcb-9q-cBz">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-N7-ote">
+                                                    <rect key="frame" x="15" y="11" width="345" height="138"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iay-3k-B8n">
+                                                            <rect key="frame" x="8" y="45.5" width="329" height="47"/>
+                                                            <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="32"/>
+                                                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" name="Background"/>
+                                                    <constraints>
+                                                        <constraint firstItem="iay-3k-B8n" firstAttribute="leading" secondItem="yj1-N7-ote" secondAttribute="leading" constant="8" id="6eI-mu-rdb"/>
+                                                        <constraint firstAttribute="trailing" secondItem="iay-3k-B8n" secondAttribute="trailing" constant="8" id="mR2-xJ-qGs"/>
+                                                        <constraint firstItem="iay-3k-B8n" firstAttribute="centerY" secondItem="yj1-N7-ote" secondAttribute="centerY" id="o1u-uc-HeS"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="yj1-N7-ote" firstAttribute="bottom" secondItem="fcb-9q-cBz" secondAttribute="bottomMargin" id="COF-Vh-C4B"/>
+                                                <constraint firstItem="yj1-N7-ote" firstAttribute="leading" secondItem="fcb-9q-cBz" secondAttribute="leadingMargin" id="URu-Rh-a6K"/>
+                                                <constraint firstItem="yj1-N7-ote" firstAttribute="trailing" secondItem="fcb-9q-cBz" secondAttribute="trailingMargin" id="gD5-1Y-ghN"/>
+                                                <constraint firstItem="yj1-N7-ote" firstAttribute="top" secondItem="fcb-9q-cBz" secondAttribute="topMargin" id="y88-n6-Gqy"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="cardView" destination="yj1-N7-ote" id="lRe-YE-QEh"/>
+                                            <outlet property="titleLabel" destination="iay-3k-B8n" id="GlL-Kn-HMm"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-Pd-PX1" customClass="FloatingButton" customModule="ItiraryApp" customModuleProvider="target">
+                                <rect key="frame" x="302" y="592" width="56" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+"/>
+                                <connections>
+                                    <segue destination="4FN-ip-cLh" kind="presentation" id="RWB-z5-5ql"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qJP-Wq-uO3" firstAttribute="top" secondItem="tCs-tb-eiK" secondAttribute="top" id="7Y5-dx-Ano"/>
+                            <constraint firstItem="qJP-Wq-uO3" firstAttribute="trailing" secondItem="e4u-Wi-jhM" secondAttribute="trailing" id="81b-KP-80Y"/>
+                            <constraint firstItem="qJP-Wq-uO3" firstAttribute="leading" secondItem="e4u-Wi-jhM" secondAttribute="leading" id="m4d-2B-Zs8"/>
+                            <constraint firstItem="qJP-Wq-uO3" firstAttribute="bottom" secondItem="e4u-Wi-jhM" secondAttribute="bottom" id="qNB-0f-9s5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="e4u-Wi-jhM"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="ulE-Pd-PX1" id="V2c-0L-mbe"/>
+                        <outlet property="tableView" destination="qJP-Wq-uO3" id="grB-Iv-eHx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZdH-4R-VaZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="197.59999999999999" y="143.47826086956522"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gQK-IM-92c">
+            <objects>
+                <viewController modalTransitionStyle="crossDissolve" modalPresentationStyle="overCurrentContext" id="4FN-ip-cLh" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8A5-DW-Gl1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="qTT-eB-fnK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fs9-Fe-Os0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="918" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Background">
+            <color red="0.14900000393390656" green="0.20000000298023224" blue="0.22400000691413879" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
