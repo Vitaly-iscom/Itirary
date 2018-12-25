@@ -12,20 +12,30 @@ class TripsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addButton: FloatingButton!
+    @IBOutlet var helpView: UIVisualEffectView!
+    
+    let seenHelpView = "seenHelpView"
     var tripIndexToEdit: Int?
     
-   override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         tableView.dataSource = self
         tableView.delegate = self
         
-        TripFunctions.readTrips(complection: {[weak self] in
-            self?.tableView.reloadData()
+        TripFunctions.readTrips(complection: {[unowned self] in
+            self.tableView.reloadData()
+            
+            if Data.tripsModels.count > 0 {
+                if UserDefaults.standard.bool(forKey: self.seenHelpView) == false {
+                    self.view.addSubview(self.helpView)
+                    self.helpView.frame = self.view.frame
+                }
+            }
         })
+
         
         view.backgroundColor = Theme.backgroundColor
-//        addButton.createFloatingActionButton()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,8 +45,21 @@ class TripsViewController: UIViewController {
             popup.doneSaving = { [weak self] in
                 self?.tableView.reloadData()
             }
+            tripIndexToEdit = nil
         }
     }
+    
+    @IBAction func closeHelpView(_ sender: AppUIButton) {
+        
+        UIView.animate(withDuration: 0.5, animations: { [unowned self] in
+            self.helpView.alpha = 0
+        }) { [unowned self] (success) in
+            self.helpView.removeFromSuperview()
+            UserDefaults.standard.set(true, forKey: self.seenHelpView)
+        }
+        
+    }
+    
 }
 
 extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
