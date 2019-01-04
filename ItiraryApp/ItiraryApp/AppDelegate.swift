@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        
+        let navBarAppearanceProxy = UINavigationBar.appearance()
+        navBarAppearanceProxy.barTintColor = Theme.accent
+        let font = UIFont(name: Theme.mainFontName, size: 20)!
+        navBarAppearanceProxy.titleTextAttributes = [NSAttributedString.Key.font: font,
+                                                     NSAttributedString.Key.foregroundColor: UIColor.white]
         return true
     }
 

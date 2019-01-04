@@ -26,11 +26,7 @@ class AddTripViewController: UIViewController {
         titleLabel.font = UIFont(name: Theme.mainFontName, size: 24)
         imageView.layer.cornerRadius = 10
         
-        // dropshadow on title
-        titleLabel.layer.shadowOpacity = 1
-        titleLabel.layer.shadowColor = UIColor.white.cgColor
-        titleLabel.layer.shadowOffset = CGSize.zero
-        titleLabel.layer.shadowRadius = 5
+        titleLabel.dropshadow()
         
         if let index = tripIndexToEdit {
             let trip = Data.tripsModels[index]

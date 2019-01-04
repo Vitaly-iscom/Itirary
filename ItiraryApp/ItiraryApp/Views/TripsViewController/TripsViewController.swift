@@ -29,12 +29,11 @@ class TripsViewController: UIViewController {
             if Data.tripsModels.count > 0 {
                 if UserDefaults.standard.bool(forKey: self.seenHelpView) == false {
                     self.view.addSubview(self.helpView)
-                    self.helpView.frame = self.view.frame
+                    self.helpView.frame = self.view.bounds
                 }
             }
         })
 
-        
         view.backgroundColor = Theme.backgroundColor
     }
     
@@ -69,7 +68,7 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell") as! TripsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: TripsTableViewCell.identifier) as! TripsTableViewCell
         
         cell.setup(tripModel: Data.tripsModels[indexPath.row])
         
@@ -114,5 +113,17 @@ extension TripsViewController: UITableViewDataSource, UITableViewDelegate {
         edit.backgroundColor = UIColor(named: "Edit")
         
         return UISwipeActionsConfiguration(actions: [edit])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let trip = Data.tripsModels[indexPath.row]
+        
+        let storyboard = UIStoryboard(name: String(describing: ActivitiesViewController.self), bundle: nil)
+        let vc = storyboard.instantiateInitialViewController() as! ActivitiesViewController
+        vc.tripId = trip.id
+        vc.tripTitle = trip.title
+        navigationController?.pushViewController(vc, animated: true)
     }
 }

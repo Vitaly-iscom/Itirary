@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="a5s-xG-zJN">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OBN-4h-w9m">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,34 +16,33 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Trips View Controller-->
+        <!--Trips-->
         <scene sceneID="Euu-F0-nav">
             <objects>
                 <viewController id="a5s-xG-zJN" customClass="TripsViewController" customModule="ItiraryApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tCs-tb-eiK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="724"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qJP-Wq-uO3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="690"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" rowHeight="160" id="Xyw-lq-QPY" customClass="TripsTableViewCell" customModule="ItiraryApp" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="TripsTableViewCell" rowHeight="160" id="Xyw-lq-QPY" customClass="TripsTableViewCell" customModule="ItiraryApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="160"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xyw-lq-QPY" id="fcb-9q-cBz">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="159.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yj1-N7-ote">
                                                     <rect key="frame" x="15" y="11" width="345" height="138"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5XC-4L-hXB">
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5XC-4L-hXB">
                                                             <rect key="frame" x="0.0" y="0.0" width="345" height="138"/>
-                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iay-3k-B8n">
-                                                            <rect key="frame" x="8" y="45.5" width="329" height="47"/>
+                                                            <rect key="frame" x="8" y="45.666666666666657" width="329" height="47"/>
                                                             <fontDescription key="fontDescription" name="FugazOne-Regular" family="Fugaz One" pointSize="32"/>
                                                             <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
@@ -51,7 +50,11 @@
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
+                                                        <constraint firstItem="5XC-4L-hXB" firstAttribute="top" secondItem="yj1-N7-ote" secondAttribute="top" id="5sY-N2-2DW"/>
+                                                        <constraint firstItem="5XC-4L-hXB" firstAttribute="centerX" secondItem="iay-3k-B8n" secondAttribute="centerX" id="6Jn-24-jCh"/>
                                                         <constraint firstItem="iay-3k-B8n" firstAttribute="leading" secondItem="yj1-N7-ote" secondAttribute="leading" constant="8" id="6eI-mu-rdb"/>
+                                                        <constraint firstItem="5XC-4L-hXB" firstAttribute="leading" secondItem="yj1-N7-ote" secondAttribute="leading" id="ApL-5V-zpl"/>
+                                                        <constraint firstItem="5XC-4L-hXB" firstAttribute="centerY" secondItem="iay-3k-B8n" secondAttribute="centerY" id="GlE-Sg-CAP"/>
                                                         <constraint firstAttribute="trailing" secondItem="iay-3k-B8n" secondAttribute="trailing" constant="8" id="mR2-xJ-qGs"/>
                                                         <constraint firstItem="iay-3k-B8n" firstAttribute="centerY" secondItem="yj1-N7-ote" secondAttribute="centerY" id="o1u-uc-HeS"/>
                                                     </constraints>
@@ -74,9 +77,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-Pd-PX1" customClass="FloatingButton" customModule="ItiraryApp" customModuleProvider="target">
-                                <rect key="frame" x="302" y="592" width="56" height="56"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ulE-Pd-PX1" customClass="FloatingButton" customModule="ItiraryApp" customModuleProvider="target">
+                                <rect key="frame" x="299" y="634" width="56" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="56" id="RdX-6Q-bWR"/>
+                                    <constraint firstAttribute="height" constant="56" id="ooI-Kv-wMe"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="+"/>
                                 <connections>
@@ -88,11 +94,14 @@
                         <constraints>
                             <constraint firstItem="qJP-Wq-uO3" firstAttribute="top" secondItem="tCs-tb-eiK" secondAttribute="top" id="7Y5-dx-Ano"/>
                             <constraint firstItem="qJP-Wq-uO3" firstAttribute="trailing" secondItem="e4u-Wi-jhM" secondAttribute="trailing" id="81b-KP-80Y"/>
+                            <constraint firstItem="e4u-Wi-jhM" firstAttribute="trailing" secondItem="ulE-Pd-PX1" secondAttribute="trailing" constant="20" id="GSz-BH-wNK"/>
                             <constraint firstItem="qJP-Wq-uO3" firstAttribute="leading" secondItem="e4u-Wi-jhM" secondAttribute="leading" id="m4d-2B-Zs8"/>
                             <constraint firstItem="qJP-Wq-uO3" firstAttribute="bottom" secondItem="e4u-Wi-jhM" secondAttribute="bottom" id="qNB-0f-9s5"/>
+                            <constraint firstItem="e4u-Wi-jhM" firstAttribute="bottom" secondItem="ulE-Pd-PX1" secondAttribute="bottom" id="x7T-h9-EoC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="e4u-Wi-jhM"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Trips" id="jSW-UJ-YS4"/>
                     <connections>
                         <outlet property="addButton" destination="ulE-Pd-PX1" id="V2c-0L-mbe"/>
                         <outlet property="helpView" destination="i7Z-gN-NQ4" id="T0G-49-j8W"/>
@@ -118,22 +127,22 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="udT-Zv-qao">
-                                <rect key="frame" x="18" y="40" width="342" height="388"/>
+                                <rect key="frame" x="18" y="40" width="342" height="387.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe rows for more features!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3J-a6-LJb">
-                                        <rect key="frame" x="0.0" y="0.0" width="342" height="72"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="342" height="71.666666666666671"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="deleteSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="mEC-Oq-u4x">
-                                        <rect key="frame" x="0.0" y="80" width="342" height="150"/>
+                                        <rect key="frame" x="0.0" y="79.666666666666686" width="342" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="8H5-N6-kP3"/>
                                         </constraints>
                                     </imageView>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="editSwipe" translatesAutoresizingMaskIntoConstraints="NO" id="ZkN-Zc-DGb">
-                                        <rect key="frame" x="0.0" y="238" width="342" height="150"/>
+                                        <rect key="frame" x="0.0" y="237.66666666666669" width="342" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="Ib1-sc-a2L"/>
                                         </constraints>
@@ -153,7 +162,7 @@
                     <blurEffect style="dark"/>
                 </visualEffectView>
             </objects>
-            <point key="canvasLocation" x="197.59999999999999" y="143.47826086956522"/>
+            <point key="canvasLocation" x="1136.8" y="143.47826086956522"/>
         </scene>
         <!--AddTripsViewController-->
         <scene sceneID="RtL-xT-Cxo">
@@ -161,11 +170,33 @@
                 <viewControllerPlaceholder storyboardName="AddTripsViewController" id="Bwd-fp-8s4" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYz-yg-h1b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="918" y="143"/>
+            <point key="canvasLocation" x="1856.8" y="142.1289355322339"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="x5W-82-aVN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OBN-4h-w9m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" barStyle="black" translucent="NO" id="Cky-bj-ZjS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="a5s-xG-zJN" kind="relationship" relationship="rootViewController" id="KgP-EX-0as"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4nt-pw-EWq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="362" y="143"/>
         </scene>
     </scenes>
     <resources>
         <image name="deleteSwipe" width="379" height="136"/>
         <image name="editSwipe" width="378" height="130"/>
     </resources>
+    <color key="tintColor" name="Tint"/>
 </document>
