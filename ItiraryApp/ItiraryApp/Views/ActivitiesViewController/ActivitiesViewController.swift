@@ -50,6 +50,8 @@ class ActivitiesViewController: UIViewController {
         alert.addAction(dayAction)
         alert.addAction(activityAction)
         alert.addAction(cancelAction)
+        alert.popoverPresentationController?.sourceView = sender
+        alert.popoverPresentationController?.sourceRect = CGRect(x: 0, y: -4, width: sender.bounds.width, height: 0) // настройка стрелки для iPad
         
         present(alert, animated: true)
     }
